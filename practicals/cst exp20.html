@@ -1,0 +1,126 @@
+<html>
+<head><title>EXPERIMENT 20</title></head>
+<body onload="fun9()" onunload="fun10()">
+<p>ONBLUR:</p>
+Enter name:<input type="text" id="name" onblur="fun1()"><br><br>
+<p>ONCHANGE:</p>
+<select  id="mylist" onchange="fun2()">
+ <option value="Nikita">Nikita</option>
+ <option value="hii">hii</option>
+</select>
+<p id="demo"></p>
+<p>ONDBLCLICK:</p>
+<p ondblclick="fun3()">double click</p>
+<p>ONCLICK:</p>
+<p ondblclick="fun4()">click me</p>
+<p>ONFOCUS:</p>
+Enter your Name:<input type="text" id="demo3" onfocus="fun5()">
+<p>ONKEYDOWN:</p>
+Enter your RollNO:<input type="text" id="demo4" onkeydown="fun6()">
+<p>ONKEYUP:</p>
+Enter your branch:<input type="text" id="demo5" onkeyup="fun7()">
+<p>ONKEYPRESS:</p>
+Enter your Address:<input type="text" onkeyup="fun8()">
+
+<p>ONMOUSEOVER and ONMOUSEOUT:</p>
+<p id="demo6" onmouseover="fun11()" onmouseout="fun12()">This is paragraph</p>
+<p>ONMOUSEDOWN and ONMOUSEUP:</p>
+<p id="demo7" onmousedown="fun13()" onmouseup="fun14()" onmousemove="fun15()">This is paragraph</p>
+<p>ONRESET:</p>
+<form onreset="fun16()">
+Enter name:<input type="text">
+<input type="reset">
+</form>
+<p>ONSELECT:</p>
+Enter your name:<input type="text" onselect="fun17()" value="Hello World">
+<p>ONSUBMIT:</p>
+<form onsubmit="fun18()">
+Enter name:<input type="text">
+
+<input type="submit">
+</form>
+<script>
+function fun1()
+ {
+   var x=document.getElementById("name");
+   x.value=x.value.toUpperCase();
+ }
+function fun2()
+ {
+   var x=document.getElementById("mylist").value;
+   document.getElementById("demo").innerHTML="You selected " +x;
+
+ }
+function fun3()
+ {
+  alert("Am doubleclicked"); 
+ }
+function fun4()
+ {
+  alert("Am clicked"); 
+ }
+function fun5()
+ {
+   document.getElementById("demo3").style.backgroundColor="blue";
+ }
+function fun6()
+ {
+   document.getElementById("demo4").style.backgroundColor="yellow";
+ }
+function fun7()
+ {
+   document.getElementById("demo5").style.backgroundColor="aqua";
+ }
+function fun8()
+ {
+   alert("You pressed a key inside input field");
+ }
+function fun9()
+ {
+  alert("Page is loaded");
+ 
+}
+function fun10()
+ {
+  alert("Page is unloaded");
+ }
+
+
+function fun11()
+ {
+   var x=document.getElementById("demo6");
+   x.style.backgroundColor="blue";
+ }
+function fun12()
+ {
+   var x=document.getElementById("demo6");
+   x.style.backgroundColor="red";
+ }
+function fun13()
+ {
+   document.getElementById("demo7").style.color="red";
+ }
+function fun14()
+ {
+   document.getElementById("demo7").style.color="pink";
+ }
+function fun15()
+ {
+   document.getElementById("demo7").style.color="brown";
+ }
+function fun16()
+ 
+{
+   alert("form was reset");
+ }
+function fun17()
+ {
+   alert("Text is selected");
+ }
+function fun18()
+ {
+   alert("form was submitted");
+ }
+</script>
+</body>
+</html>

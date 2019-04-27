@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+.descendants{display:block;border:2px solid grey;color:black;padding:5px; margin:15px;}
+</style>
+<script src="C:\Users\Dr. Amar Singh\Desktop\College\SEM 3\HTML\lib.js">
+</script>
+<script>
+function f1()
+{ $(document).ready(function(){
+$("div").children("p.first").
+css({"color":"red","border":"4px solid red"});
+});
+}
+</script>
+</head>
+<body class="descendants">
+<div style="width:500px;">
+<p class="first" > 1st paragraph</p>
+<p class="second">2nd paragraph</p>
+<p class="third">3rd paragraph</p>
+</div>
+<button onClick="f1()">click</button>
+</body> 
+</html>

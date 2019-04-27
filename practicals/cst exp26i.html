@@ -1,0 +1,94 @@
+<html>
+<title>EXPERIMENT 26</title>
+<body>
+<strong>DOCUMENT:-<strong>
+<h1> BEFORE APPEND</h1>
+<div id="list">
+<p id="l1">*HTML</p>
+<p id="l2" >*DHTML</p>
+<p id="l3">*PHP</p>
+</div>
+<button onclick="append()">Click Here</button><br>
+<h1> AFTER APPEND</h1>
+<div id="list1">
+<p id="p1">*HTML</p>
+<p id="p2" >*DHTML</p>
+<p id="p3">*PHP</p>
+</div>
+<strong>LOCATION:-</strong>
+<p>Click the button to display the hostname and port number of the current URL.</p>
+<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction1()">Try it</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p>Click the button to display the hostname of the current URL.</p>
+<button onclick="myFunction2()">Try it</button>
+<p id="demo2"></p>
+<p>Click the button to display the entire URL of the current page.</p>
+<button onclick="myFunction3()">Try it</button>
+<p id="demo3"></p>
+<script>
+function append()
+{
+var parent = document.getElementById("list1");
+var child = document.getElementById("p1");
+var para = document.createElement("p");
+var node = document.createTextNode("*CSS");
+para.appendChild(node);                             
+document.getElementById("list1").appendChild(para);     
+}
+function myFunction() {
+ 
+ var x = location.host;
+  document.getElementById("demo").innerHTML = x;
+}
+function myFunction1() {
+  var x = location.host;
+  document.getElementById("demo1").innerHTML = x;
+}
+function myFunction2() {
+  var x = location.hostname;
+  document.getElementById("demo2").innerHTML= x;
+}
+function myFunction3() {
+  var x = location.href;
+  document.getElementById("demo3").innerHTML = x;
+}
+</script>
+<strong>FORMS:-</strong>
+<form>
+  First Name: <input type="text" name="fname"><br>
+  Last Name: <input type="text" name="lname">
+</form>
+<p>Click the button to display the number of form elements in the document.</p>
+<button onclick="mycst()">Click me!</button>
+<p id="cst"></p>
+<script>
+function mycst() {
+  var s = document.forms.length;
+  document.getElementById("cst").innerHTML = s;
+}
+</script>
+<form action="exp1.html">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  City: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</form> 
+<p>Click the "Try it" button to display the value of each element in the form.</p>
+<button onclick="mycst1()">Try it</button>
+<p id="cst1"></p>
+<script>
+function mycst1() {
+  var x = document.forms[0];
+  var txt = "";
+  var i;
+  for (i = 0; i < x.length; i++) {
+    txt = txt + x.elements[i].value + "<br>";
+  }
+ 
+ document.getElementById("cst1").innerHTML = txt;
+}
+</script>
+</body>
+</html>

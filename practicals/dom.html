@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <ol id="o">
+            <li id="1">bread</li>
+            <li id="2">seafood</li>
+            <li id="3">rice</li>
+            <li id="4">pasta</li>
+            <li id="5">soups</li>
+            </ol>
+        <button onclick="ADD()">click to add</button>
+        <button onclick="REMOVE()">click to remove</button>
+        <button onclick="REPLACE()">click to replace</button>
+        <script>
+        function ADD(){
+            var parent=document.createElement("li");
+            var child=document.createTextNode("eggs");
+            parent.appendChild(child);
+            var x=document.getElementById('o');
+            x.appendChild(parent);
+        }
+        function REMOVE(){
+            var parent=document.getElementById('o');
+            var child=document.getElementById('4');
+            parent.removeChild(child);
+        }
+        function REPLACE(){
+            var q=document.createElement("li");
+            var w=document.createTextNode("salad");
+            q.appendChild(w);
+            var x=document.getElementById('o');
+            var y=document.getElementById('3');
+            x.replaceChild(q,y);
+        }
+        </script>
+    </body>
+</html>

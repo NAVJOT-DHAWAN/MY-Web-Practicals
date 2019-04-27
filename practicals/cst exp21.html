@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>EXPERIMENT 21</title>
+<body>
+<h2>javascript</h2>
+<p id="demo"></p>
+<button onclick="string()">strings</button>
+<button onclick="math()">maths</button>
+<button onclick="date()">dates</button>
+<button onclick="array()">arrays</button>
+<script>
+function string()
+{
+var a = "hello"; 
+var b = "good morning";
+var c = new String("hello");
+document.getElementById("demo").innerHTML =
+a + "<br>" + b + "<br>"+a.length+"<br>"+b.length+"<br>"+"javscript objects"+"<br>"+typeof  a+"<br>"+typeof  c+"<br>"+( a==c)+"<br>"+( a==b)+"<br>"+b.indexOf("morning")+"<br>"+b.lastIndexOf("morning")+"<br>"+b.slice(2,5)+"<br>"+b.substr(4,8)+"<br>"+b.substring(4,8)+"<br>"+b.replace("morning","afternoon")+"<br>"+b.toUpperCase()+"<br>"+b.toLowerCase()+"<br>"+a.concat(" ",b)+"<br>"+b.charAt(2);
+}
+function math()
+{
+document.getElementById("demo").innerHTML=Math.PI+"<br>"+Math.pow(8,2)+"<br>"+Math.sqrt(64)+"<br>"+Math.abs(-4.7)+"<br>"+Math.ceil(4.4)+"<br>"+Math.floor(4.7)+"<br>"+Math.sin(90 * Math.PI / 
+
+180)+"<br>"+Math.cos(0 * Math.PI / 180)+"<br>"+Math.min(0, 150, 30, 20, -8, -200)+"<br>"+Math.max(0, 150, 30, 20, -8, -200)+"<br>"+Math.random();
+}
+function date()
+{
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getTime()+"<br>"+d.getDate()+"<br>"+d.getDay()+"<br>"+d.getFullYear()+"<br>"+d.getHours()+"<br>"+d.getMilliseconds()+"<br>"+d.getMinutes()+"<br>"+d.getMonth()+"<br>"+d.getSeconds()+"<br>"+d.getTime();
+}
+function array()
+{
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString()+"<br>"+fruits+"<br>"+fruits.pop()+"<br>"+fruits+"<br>"+fruits.push("Kiwi")+"<br>"+fruits.shift()+"<br>"+fruits.unshift("Lemon");
+}
+</script>
+</body>
+</html>

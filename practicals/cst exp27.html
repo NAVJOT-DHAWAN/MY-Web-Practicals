@@ -1,0 +1,57 @@
+<html>
+<title>EXPERIMENT 27</title>
+<script>
+function formvalidate()
+{
+var name=document.myform.name.value;
+var age=document.myform.age.value;
+var mobile=document.myform.mobile.value;
+var pass=document.myform.pass.value;
+var pass1=document.myform.pass1.value;
+var email=document.myform.email.value;   
+if(name==null || name==" " || isNaN(name)==false)
+{
+alert("Name should not be empty and should be alphabetic value");
+return false;
+}
+else if(age==null ||age==" " || age<0 || age>200)
+{
+alert("Age should be a valid age that is should not be negative or greater than 200.");
+return false;
+}
+else if(pass==null || pass.length<8)
+{
+alert("Password should be of at least 8 characters.");
+return false;
+}
+else if(pass1==null || pass1!=pass)
+{
+alert("Re-enter password must contain repetition of password.");
+return false;
+}
+else if(mobile==null ||mobile==""|| name==null||age==null||email==null||pass==null||pass1==null)
+{
+alert("Any field should not be left empty");
+return false;
+}
+else if(email==null ||email.search(/@/)==false)
+{
+alert("invalid email address");
+return false;
+}  
+else
+return true;
+}
+</script>
+<body>
+<form name="myform" method="post"  onsubmit="return formvalidate()">
+Name:- <input type="text" name="name"><br>
+Age:- <input type="text" name="age" required><br>
+Mobile number <input type="text" name="mobile"><br>
+Password <input type="password" name="pass"><br>
+Re-enter Password  <input type="password" name="pass1"><br>
+Email <input type="email" name="email"><br>
+<input type="submit" value="register">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<script src="C:\Users\Dr. Amar Singh\Desktop\College\SEM 3\HTML\lib.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){
+$("div").animate({left:'500px',
+			height:'150px',
+			width:'150px',
+			opacity:'0.4'});
+});
+});
+$(document).ready(function(){
+$("#b2").click(function(){
+$("#p1").css({"color":"red","background-color":"yellow","font-size":"20px"}).slideup(2000).slideDown(2000);
+});
+});
+</script>
+<body>
+<p>
+animation using j-Query animate method</p>
+<button id="b1">animate</button><br>
+<div style="background:yellow;
+height:50px;
+width:50px;position:absolute;">
+</div>
+<br><br>
+<p id="p1">check chaining effect </p>
+<button id="b2"> click </button>
+</body>
+</html>

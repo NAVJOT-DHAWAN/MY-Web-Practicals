@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>	<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p:first").css("background-color", "yellow");
+});
+$(document).ready(function(){
+    $("#intro").css("background-color", "red");
+});
+$(document).ready(function(){
+    $("p:first-child").css("background-color", "green");
+});
+$(document).ready(function(){
+    $(":input").css("background-color", "blue");
+});
+$(document).ready(function(){
+    $(":header").css("background-color", "yellow");
+});
+</script></head><body>
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<p>This is the last paragraph.</p>
+<h1>Welcome to My Homepage</h1>
+<p id="intro">My name is Donald.</p>
+<p>I live in Duckburg.</p>
+<p>The first paragraph in body.</p>
+<div style="border:1px solid;">
+<p>The first paragraph in div.</p>
+<p>The last paragraph in div.</p>
+</div><br>
+<div style="border:1px solid;">
+<span>This is a span element.</span>
+<p>The first paragraph in another div.</p>
+<p>The last paragraph in another div.</p></div>
+<p>The last paragraph in body.</p>
+<form action="">
+  Name: <input type="text" name="user"><br>
+  Password: <input type="password" name="password"><br>
+<button type="button">Useless Button</button>
+<input type="button" value="Another useless button"><br>
+<input type="reset" value="Reset">
+<input type="submit" value="Submit"><br></form>
+<h1>Welcome to My Homepage</h1>
+<h2>My Fantastic Homepage</h2>
+<h3>It's amazing!</h3>
+<p class="intro">My name is Donald.</p>
+<p>I live in Duckburg.</p>
+<p>My best friend is Mickey.</p>
+<p>Who is your favourite:</p>
+<ul id="choose">
+<li>Goofy</li>
+<li>Mickey</li>
+<li>Pluto</li></ul>
+</body>
+</html>

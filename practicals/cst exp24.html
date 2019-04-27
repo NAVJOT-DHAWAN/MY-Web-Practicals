@@ -1,0 +1,34 @@
+<html>
+<head><title>EXPERIMENT 24</title></head>
+<body>
+<h2>LIST OF STATIONERY ITEMS</h2>
+<div id="div1">
+<p id="p1">Pens</p>
+<p id="p2" >Highlighter</p>
+<p id="p3">Pencils</p>
+</div>
+<button onclick="append()">append</button><br><br>
+<div id="div2">
+<p id="p4">Erasers</p>
+<p id="p5">Notebooks</p>
+</div>
+<button onclick="myFunction()">remove</button>
+<script>
+function append()
+{
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+var para = document.createElement("p");
+var node = document.createTextNode("Ruled paper");
+para.appendChild(node);
+parent.replaceChild(para,child);
+}
+function myFunction()
+{
+var x= document.getElementById("div2");
+var y= document.getElementById("p4");
+x.removeChild(y);
+}
+</script>
+</body>
+</html>

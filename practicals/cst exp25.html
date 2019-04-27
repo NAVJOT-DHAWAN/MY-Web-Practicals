@@ -1,0 +1,121 @@
+<html>
+<title>EXPERIMENT 25</title>
+<body>
+<p>Number of URLs in history list:</p>
+<p id="demo"></p>
+<button onclick="goBack()">Go Back</button>
+<button onclick="goForward()">Go Forward</button>
+<button onclick="go()">Go Back 2 Pages</button>
+<script>
+var x = history.length;
+document.getElementById("demo").innerHTML = x;
+function goBack() {
+  window.history.back();
+}
+function goForward() {
+  window.history.forward();
+}
+function go() {
+  window.history.go(-2);
+}
+</script>
+<p>Click the button to display this frame's height and width.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<iframe src="https://www.cnn.com"></iframe>
+<iframe src="https://www.bbc.com"></iframe>
+<iframe src="https://www.nytimes.com"></iframe>
+<p>Click the button to get the number of frames found on this page.</p>
+<button onclick="myFunction1()">Try it</button>
+<p id="demo1"></p>
+<p>Click the button to display this browser window's height and width (including toolbars and scrollbars).</p>
+<button onclick="myFunction2()">Try it</button>
+<p id="demo2"></p>
+<p>Open a new window, and resize the width and height to 250px:</p>
+<button onclick="openWin()">Create window</button>
+<button onclick="resizeWin()">Resize window</button>
+<p>Click the button to wait 3 seconds, then alert "Hello".</p>
+<p>After clicking away the alert box, an new alert box will appear in 3 seconds. This goes on forever...</p>
+<button onclick="myFunction3()">Try it</button>
+<p>Click the button to wait 3 seconds, then alert "Hello".</p>
+<button onclick="myFunction4()">Try it</button>
+<p>Click the button to open a new window, and assure that the new window GETS focus (send the new window to the front).</p>
+<button onclick="myFunction5()">Try it</button>
+<p>Open "myWindow" and move the new window 250px relative to its current position:</p>
+<button onclick="openWin1()">Open "myWindow"</button>
+<button onclick="moveWin()">Move "myWindow"</button>
+<p id="cst"></p>
+<p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+<p id="cst1"></p>
+<p id="cst2"></p>
+<p id="cst3"></p>
+<p id="cst4"></p>
+<p id="cst5"></p>
+<p id="cst6"></p>
+<p id="cst7"></p>
+<p id="cst8"></p>
+<script>
+function myFunction() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+function myFunction1() {
+  var x = window.length;
+  document.getElementById("demo1").innerHTML = x;
+}
+function myFunction2() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  document.getElementById("demo2").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+var myWindow;
+function openWin() {
+  myWindow = window.open("", "", "width=100, height=100");
+}
+function resizeWin() {
+  myWindow.resizeBy(250, 250);
+  myWindow.focus();
+}
+function myFunction3() {
+  setInterval(function(){ alert("Hello"); }, 3000);
+}
+function myFunction4() {
+  setTimeout(function(){ alert("Hello"); }, 3000);
+}
+function myFunction5() {
+  var myWindow = window.open("", "", "width=200,height=100");
+  myWindow.document.write("<p>A new window!</p>");
+  myWindow.focus();
+}
+var myWindow1;
+function openWin1() {
+  myWindow = window.open("", "myWindow1", "width=200, height=100");
+  myWindow.document.write("<p>This is 'myWindow1'</p>");
+}
+
+function moveWin() {
+  myWindow1.moveBy(250, 250);
+  myWindow1.focus();
+}
+document.getElementById("cst").innerHTML = 
+"The URL port number of the current page is: " + window.location.port;
+var x = location.protocol;
+  document.getElementById("cst1").innerHTML = x;
+  var x1 = location.href;
+  document.getElementById("cst2").innerHTML = x1;
+  var x2 = "Browser CodeName: " + navigator.appCodeName;
+   document.getElementById("cst3").innerHTML = x2;
+   var x3 = "Browser Name: " + navigator.appName;
+    document.getElementById("cst4").innerHTML = x3;
+    var x4 = "Version Info: " + navigator.appVersion;
+ document.getElementById("cst5").innerHTML = x4;
+ var x5 = "Is the browser online? " + navigator.onLine;
+  document.getElementById("cst6").innerHTML = x5;
+  var x6 = "Java Enabled: " + navigator.javaEnabled() + "Data tainting enabled: " + navigator.taintEnabled();
+  document.getElementById("cst7").innerHTML = x6;
+  var x7 = "Browser's Engine Name: " + navigator.product;
+  document.getElementById("cst8").innerHTML = x7;
+</script>
+</body>
+</html>
